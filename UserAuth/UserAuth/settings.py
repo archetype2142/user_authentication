@@ -128,4 +128,6 @@ STATICFILES_DIR = [STATIC_DIR,]
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
-LOGIN_URL = 'home/user_login/'
+LOGIN_URL = 'Home/user_login/'
+
+print("temp dir path", TEMPLATES_DIR)
