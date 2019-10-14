@@ -39,16 +39,16 @@ def register(request):
                 profile.save()
                 registered = True
         else:
-            print(user_form.errors,profile_form.errors)
+            print(user_form.errors, profile_form.errors)
     else:
         user_form = UserForm()
         profile_form = UserProfileInfoForm()
     
     context = {'user_form':user_form,
-                           'profile_form':profile_form,
-                           'registered':registered}
+                'profile_form':profile_form,
+                'registered':registered}
 
-    return render(request,'Home/registration.html', context=context)
+    return render(request,'Home/registration.html', context)
 
 # to many if-else is antipattern 
 # exception handling helps for deduging in AWS production.
